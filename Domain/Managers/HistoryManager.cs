@@ -37,5 +37,19 @@ namespace Domain.Managers
                 return docs;
             }
         }
+
+        public IEnumerable<History> List(string search)
+        {
+            using (ISession session = NHibernateHelper.OpenSession())
+            {
+                var criteria = session.CreateCriteria(typeof(History));
+
+                criteria.Add(Restrictions.Like("Operation", search, MatchMode.Anywhere));
+
+                var docs = criteria.List<History>();
+
+                return docs;
+            }
+        }
     }
 }

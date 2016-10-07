@@ -1,9 +1,5 @@
 ﻿using Domain.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Managers
 {
@@ -11,5 +7,6 @@ namespace Domain.Managers
     {
         void Add(History item);
         IEnumerable<History> List();
+        IEnumerable<History> List(string search);
     }
 }

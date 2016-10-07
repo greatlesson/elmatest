@@ -234,6 +234,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Calc\Index.cshtml" />
     <Content Include="Views\Calc\History.cshtml" />
+    <Content Include="Views\Calc\MiniHistory.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\History.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

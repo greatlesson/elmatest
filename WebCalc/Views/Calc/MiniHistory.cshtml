@@ -1,0 +1,10 @@
+﻿@model WebCalc.Models.CalcModel
+
+@if (Model.History != null)
+{
+    <h2>
+        История по операции <b>@(Model.Operation)</b>
+    </h2>
+
+    @Html.DisplayFor(m => m.History)
+}

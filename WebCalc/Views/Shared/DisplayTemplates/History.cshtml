@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Domain.Models.History>
+
+<table class="table">
+    <tr>
+        <th>X</th>
+        <th>Y</th>
+        <th>Result</th>
+        <th>Operaion</th>
+        <th>Creation Date</th>
+    </tr>
+    @foreach (var oper in Model)
+    {
+        <tr>
+            <td>@(oper.X)</td>
+            <td>@(oper.Y)</td>
+            <td>@(oper.Result)</td>
+            <td>@(oper.Operation)</td>
+            <td>@(oper.CreationDate)</td>
+        </tr>
+    }
+</table>

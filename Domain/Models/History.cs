@@ -16,7 +16,7 @@ namespace Domain.Models
         public virtual int Y { get; set; }
         
         [Display(Name = "Результат")]
-        public virtual double Result { get; set; }
+        public virtual double? Result { get; set; }
 
         [Display(Name = "Операция")]
         public virtual string Operation { get; set; }
