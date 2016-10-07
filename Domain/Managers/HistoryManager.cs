@@ -44,8 +44,10 @@ namespace Domain.Managers
             {
                 var criteria = session.CreateCriteria(typeof(History));
 
-                criteria.Add(Restrictions.Like("Operation", search, MatchMode.Anywhere));
-
+                if (!string.IsNullOrWhiteSpace(search))
+                {
+                    criteria.Add(Restrictions.Like("Operation", search, MatchMode.Anywhere));
+                }
                 var docs = criteria.List<History>();
 
                 return docs;
